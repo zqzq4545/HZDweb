@@ -1,0 +1,70 @@
+.phoneBanner{
+    position: relative;
+    height: 723px;
+    background-color: #ffffff;
+    padding-top: 75px;
+    margin: 75px 15%;
+}
+    .phone{
+        width: 325px;
+        position: absolute;
+        right: 0;
+        z-index: 9;
+
+    }
+    .banner{
+        width: 325px;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+    }
+    .text{
+        position: absolute;
+        top:30vh;
+        font-size: 40px;
+    }
+.teacherIntroduce{
+    position: relative;
+    width: 85%;
+    margin-left: 15%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #e8ecf1;
+}
+    .teacherIntroduce button{
+        margin: 20px 5%;
+    }
+.teachingMethod{
+    position: relative;
+    width: 100%;
+    padding: 0 15%;
+    border-radius: 10px;
+
+    /*background-color: #6d6de9;*/
+}
+
+.teacherDuty{
+    position: relative;
+    width: 85%;
+    margin-right: 15%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #6d6de9;
+    padding: 60px 15%;
+}
+    .teacherDuty p{
+        position: relative;
+        color: #f9f9f9;
+        font-size: 20px;
+
+    }
+    .teacherDuty span{
+        position: relative;
+        color: #ffffff;
+        font-size: 30px;
+
+    }
+.communicate{
+    width: 100%;
+    padding:0 15%;
+}

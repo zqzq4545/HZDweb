@@ -1,0 +1,40 @@
+/*.bannerS{*/
+/*    position: relative;*/
+/*    top:100px;*/
+/*    margin-top: 75px;*/
+
+/*}*/
+.eat{
+    padding: 0 15%;
+    font-size: 30px;
+}
+    .steps-content {
+        margin-top: 16px;
+        border: 1px dashed #e9e9e9;
+        border-radius: 6px;
+        background-color: #fafafa;
+        min-height: 200px;
+        text-align: center;
+        padding-top: 80px;
+    }
+
+    .steps-action {
+        margin-top: 24px;
+
+    }
+    .ant-steps-item-description{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .ant-steps-item-title{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+.accommodation{
+    width: 70%;
+    margin: 0 15%;
+}
+.activity{
+    width: 70%;
+    margin: 0 15%;
+}

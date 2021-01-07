@@ -1,0 +1,198 @@
+.videoContainer{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+    .fullScreenVideo {
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+        /*filter:grayscale(20%);  !*背景灰度*!*/
+        filter:brightness(70%);
+        /*-webkit-transform: translateX(-50%) translateY(-50%);*/
+        /*transform: translateX(-50%) translateY(-50%);*/
+        /*-webkit-transition: 1s opacity;*/
+        /*transition: 1s opacity;*/
+    }
+    .coverVideo{
+
+        position: absolute;
+        margin-left: 20%;
+        width: 80%;
+        top: 65vh;
+        z-index: 1;
+        padding: 30px;
+        background-color: rgba(233,233,233,0.2);
+        border-top-left-radius: 30px;
+
+    }
+    .coverVideo p{
+        color: #ffffff;
+        opacity: 1;
+    }
+    /*.videoContainer:before{*/
+    /*    content: "";*/
+    /*    position: absolute;*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*    display: block;*/
+    /*    z-index: -1;*/
+    /*    top: 0;*/
+    /*    left: 0;*/
+    /*    background: rgba(0,0,0,0);*/
+    /*}*/
+
+.summarize{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+    .summarize-banner{
+        position: relative;
+        z-index: 0;
+        margin: 0 15%;
+        overflow: hidden;
+        width: 70%;
+        text-align: center;
+
+
+    }
+        .summarize-btn-l{
+            position:absolute ;
+            z-index: 1;
+            left: 0;
+            top: 40%;
+        }
+            .imgM-enter-active, .imgM-leve-active{
+                transition: opacity 2s;
+            }
+            .imgM-enter, .imgM-leve-to{
+                opacity: 0;
+            }
+            .imgR-enter-active, .imgR-leve-active{
+                transition: opacity 1s;
+            }
+            .imgR-enter, .imgR-leve-to{
+                opacity: 0;
+            }
+
+
+
+        .summarize-btn-r{
+            position:absolute ;
+            z-index: 1;
+            right: 0;
+            top: 40%;
+
+        }
+        .img-left{
+            position:relative ;
+            z-index: 0;
+            left: -15%;
+        }
+        .img-middle{
+            position:relative ;
+        }
+        .img-right{
+            position:relative ;
+            right: -15%;
+        }
+
+    .summarize-left{
+        position: relative;
+        z-index: 0;
+        left: 15%;
+        width: 45%;
+        bottom: -5vh;
+        height:40vh;
+        background-color: #e8ecf1;
+        padding: 30px 40px 40px 40px;
+
+        border-radius: 10px;
+        font-size: 24px;
+        line-height:42px;
+        letter-spacing:0.8px;
+    }
+    .summarize-right{
+        position: relative;
+        z-index: 1;
+        left: 40%;
+        top: -5vh;
+        width: 45%;
+        height:40vh;
+        padding: 50px 40px 40px 40px;
+        background-color: #6d6de9;
+        border-radius: 10px;
+        font-size: 24px;
+        line-height:42px;
+        letter-spacing:0.8px;
+        color: #ffffff;
+    }
+
+.teacher{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 5vh 15% ;
+}
+.teacher-container{
+    position: relative;
+    z-index: 0;
+    text-align: center;
+}
+.teacher-container img:hover{
+    transform: scale(1.15);
+    transition: 0.7s;
+}
+.performance{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 60px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor:default;
+    margin-bottom: 60px;
+
+}
+.performance p{
+   position: relative;
+    top:-15px;
+    font-size: 20px;
+    padding:10px 10px 10px 20px;
+
+    border-radius: 20px;
+}
+
+    .timeline{
+        height: 400px;
+        position: relative;
+        width: 40%;
+        padding-top: 60px;
+
+
+    }
+    .charts{
+        position: absolute;
+        left: 45%;
+        background-color: #ffffff;
+    }
+
+
+
+
+.culture{
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 60vh;
+    background-color: #ffff00;
+}
