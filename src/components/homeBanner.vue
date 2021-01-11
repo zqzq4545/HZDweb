@@ -1,7 +1,7 @@
 <template>
   <div>
-    <a-icon class="lButton" @click="beforeBanner"  type="left-circle" />
-    <a-icon class="rButton" @click="nextBanner" type="right-circle" />
+    <a-icon v-show="bannerControl != 0 " class="lButton" @click="nextBanner"  type="left-circle" />
+    <a-icon v-show="bannerControl != 4 " class="rButton" @click="beforeBanner" type="right-circle" />
     <ul id="banner">
     </ul>
 
@@ -21,7 +21,8 @@ export default {
   data (){
     return {
       bannerData:[],
-      initP:4 //banner 第一张图片初始位置
+      initP:4, //banner 第一张图片初始位置
+      bannerControl:0 //限制banner 最后最前不能移动
     }
   },
   methods:{
@@ -59,17 +60,20 @@ export default {
             break;
         }
         cur_p.style.position = "relative";
+        cur_p.style.marginTop = "30px"
         cur_p.style.height = "30px";
         cur_p.style.width = "672px";
+        cur_p.style.fontSize = "17px"
 
         cur_img.src = "http://106.12.218.50/homeBanner/homeBanner" + i +".png";
         cur_img.style.width = "672px";
         cur_img.style.height = "378px";
+        cur_img.style.borderRadius = "10px";
         //样式
         cur_li.style.float = "left"
         cur_li.style.position = "relative"
         cur_li.style.left = this.initP + "%"
-        cur_li.style.transitionDuration = "1s"
+        cur_li.style.transitionDuration = "0.7s"
         cur_li.style.marginLeft = "3%"
 
 
@@ -84,7 +88,8 @@ export default {
       this.bannerData = e
     },
     nextBanner(){
-      this.initP = this.initP + 10
+      this.bannerControl = this.bannerControl - 1
+      this.initP = this.initP + 10.5
       let e = this.bannerData
       e.forEach(el => {
          el.style.left = this.initP + "%"
@@ -92,7 +97,8 @@ export default {
       })
     },
     beforeBanner(){
-      this.initP = this.initP - 10
+      this.bannerControl = this.bannerControl + 1
+      this.initP = this.initP - 10.5
       let e = this.bannerData
       e.forEach(el => {
         el.style.left = this.initP + "%"
@@ -113,7 +119,7 @@ ul{
   top:0;
   left: 0;
   right: 0;
-  bottom: 0;
+
   margin: auto;
   height: 378px;
   width: 500%;
@@ -136,15 +142,15 @@ ul{
   position: absolute;
   font-size: 40px;
   z-index: 6;
-  top: 45%;
-
+  top: 35%;
+  left: 1%
 }
 .rButton{
   position: absolute;
   font-size: 40px;
   z-index: 6;
-  top: 45%;
-  right: 0;
+  top: 35%;
+  right: 1%;
 }
 
 
