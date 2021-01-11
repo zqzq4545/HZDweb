@@ -13,11 +13,10 @@
     "axios": "^0.21.1",
     "babel-plugin-import": "^1.13.3",
     "core-js": "^3.6.5",
-    "swiper": "^6.4.5",
+    "echarts": "^4.9.0",
     "view-design": "^4.4.0",
     "vue": "^2.6.11",
-    "vue-router": "^3.4.9",
-    "echarts": "^4.9.0"
+    "vue-router": "^3.4.9"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

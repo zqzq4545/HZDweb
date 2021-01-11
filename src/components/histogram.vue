@@ -23,11 +23,15 @@ export default {
   props:{
     histogramData:{
       type:Array,
-      default:["2019平均提分", "2019最高提分", "2020平均提分", "2020最高提分" ]
+      default: function () {
+        return ["2019平均提分", "2019最高提分", "2020平均提分", "2020最高提分" ]
+      }
     },
     histogramInfo:{
       type:Array,
-      default:[86.5, 227, 87.8, 202]
+      default: function (){
+        return [86.5, 227, 87.8, 202]
+      }
     }
   },
   mounted() {

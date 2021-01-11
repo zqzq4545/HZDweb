@@ -1,15 +1,25 @@
 <template>
-<div>
-  <p>这是其他</p>
-</div>
+
 </template>
 
 <script>
 export default {
-name: "others"
+  name: "others",
+  created() {
+
+  },
+  data(){
+    return {
+
+    }
+  },
+  methods:{
+
+  }
 }
 </script>
 
 <style scoped>
+
 
 </style>

@@ -41,7 +41,7 @@ export default {
       for ( let i = 1 ; i <= 5; i++){
         var cur_li = document.createElement("li");
         var cur_img = document.createElement("img");
-        
+
         cur_img.src = "http://106.12.218.50/test/" + i + ".png"
 
         cur_img.style.width = "400px";
@@ -57,7 +57,6 @@ export default {
         cur_li.style.position = "absolute"
         cur_li.style.left = "0px"
         cur_li.style.transitionDuration = "0.4s"
-        cur_li.style.float = "left"
       }
 
       let len = imgData.length - 1;

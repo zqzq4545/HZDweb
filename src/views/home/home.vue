@@ -64,45 +64,41 @@
     <headline :main-title="title4" :bgc-title="title4B" >
     </headline>
 
-    <div class="culture">
-    </div>
 
-    <headline :main-title="title3" :bgc-title="title3B" >
-    </headline>
 
     <div class="performance">
 
       <div class="timeline">
 
-          <a-timeline>
-            <a-timeline-item>
-<!--              @mouseleave="leaveTimeLine(0)"-->
-              <p @mouseover="overTimeLine(0)"  ref="time0" style="color: #ffffff;background-color:#2B32B1;" >
-                2019 年 03 月全托项目启动
-              </p>
-              <br>
-            </a-timeline-item>
-            <a-timeline-item>
-              <p  @mouseover="overTimeLine(1)"  ref="time1" >
-                2019 年 06 月 第一批全托学生参加高考
-              </p>
-              <br>
-            </a-timeline-item>
-            <a-timeline-item>
-              <p  @mouseover="overTimeLine(2)" ref="time2" >
-                2020 年 07 月 第二批全托学生参加高考
-              </p>
-              <br>
-            </a-timeline-item>
-            <a-timeline-item>
+        <a-timeline>
+          <a-timeline-item>
+            <!--              @mouseleave="leaveTimeLine(0)"-->
+            <p @mouseover="overTimeLine(0)"  ref="time0" style="color: #ffffff;background-color:#2B32B1;" >
+              2019 年 03 月全托项目启动
+            </p>
+            <br>
+          </a-timeline-item>
+          <a-timeline-item>
+            <p  @mouseover="overTimeLine(1)"  ref="time1" >
+              2019 年 06 月 第一批全托学生参加高考
+            </p>
+            <br>
+          </a-timeline-item>
+          <a-timeline-item>
+            <p  @mouseover="overTimeLine(2)" ref="time2" >
+              2020 年 07 月 第二批全托学生参加高考
+            </p>
+            <br>
+          </a-timeline-item>
+          <a-timeline-item>
 
-              <p  @mouseover="overTimeLine(3)" ref="time3">
-                2021 再攀高峰
-              </p>
+            <p  @mouseover="overTimeLine(3)" ref="time3">
+              2021 再攀高峰
+            </p>
 
-            </a-timeline-item>
-          </a-timeline>
-        </div>
+          </a-timeline-item>
+        </a-timeline>
+      </div>
 
       <div class="charts">
         <histogram v-if="timeLineShow == 0"></histogram>
@@ -113,8 +109,14 @@
 
 
 
-      </div>
+    </div>
+    <headline :main-title="title3" :bgc-title="title3B" >
+    </headline>
 
+
+    <div class="culture">
+      <home-banner></home-banner>
+    </div>
 
 
 
@@ -129,6 +131,7 @@ import Headline from "@/components/Headline";
 import Form from "@/components/Form"
 import histogram from "@/components/histogram";
 import Pie from "@/components/Pie"
+import homeBanner from "@/components/homeBanner";
 
 export default {
   mixins: [mixin],
@@ -137,7 +140,8 @@ export default {
     Headline,
     Form,
     histogram,
-    Pie
+    Pie,
+    homeBanner
   },
   mounted() {
     this.initData()

@@ -5,6 +5,10 @@ import animated from 'animate.css'
 import axios from "axios";
 import { Button,Timeline,Icon,Row,Col,Divider,Affix,Form,Input,InputNumber,Carousel,Collapse,Steps,Card } from 'ant-design-vue';
 import echarts from "echarts";
+
+
+
+
 Vue.prototype.$echarts = echarts //引入组件
 
 Vue.use(animated);
@@ -30,6 +34,10 @@ Vue.component(Card.name, Card);
 Vue.component(Card.Meta.name, Card.Meta);
 
 Vue.config.productionTip = false
+
+router.afterEach((to,from,next) => {
+  window.scrollTo(0,0);
+})
 
 new Vue({
   render: h => h(App),
