@@ -1,26 +1,31 @@
 <template>
-  <div>
-    <div class="bannerS">
-        <a-carousel effect="fade" arrows  autoplay >
-          <div
-              slot="prevArrow"
-              slot-scope="props"
-              class="custom-slick-arrow"
-              style="left: 10px;zIndex: 2"
-          >
-            <a-icon type="double-left" />
-          </div>
-          <div slot="nextArrow" slot-scope="props" class="custom-slick-arrow" style="right: 10px">
-            <a-icon type="double-right" />
-          </div>
-          <div><img src="~@/assets/image/course/chatting/test1.png"></div>
-          <div><img src="~@/assets/image/course/chatting/test2.png"></div>
-          <div><img src="~@/assets/image/course/chatting/test3.png"></div>
+  <div style="padding-top: 75px">
+    <a-row :span="24" style="height: 100vh">
+      <a-col :span="12" >
+        <div class="exhibitionL">
+          <p style="font-size: 40px">
+            教室照片 8:9
+          </p>
+        </div>
+      </a-col>
 
-        </a-carousel>
+      <a-col :span="12"  >
+        <div class="exhibitionR1">
+          <p style="font-size: 40px" >
+            宿舍照片 16:9
+          </p>
+        </div>
+      </a-col>
 
+      <a-col :span="12"  >
+        <div class="exhibitionR2">
+          <p style="font-size: 40px" >
+            图书馆照片 16:9
+          </p>
+        </div>
+      </a-col>
 
-      </div>
+    </a-row>
 
     <headline :main-title="eatTitle" :bgc-title="eatTitle2"></headline>
 
@@ -224,32 +229,19 @@ export default {
 @import "~@/assets/css/show.css";
 
 
-.ant-carousel >>> .slick-slide {
-  text-align: center;
-  height: 70vh;
-  line-height: 160px;
-  background: #364d79;
-  overflow: hidden;
-  margin-top: 75px;
-
+.exhibitionL{
+  height: 100vh;
+  background-color: red;
+  position: relative;
 }
-.ant-carousel >>> .custom-slick-arrow {
-  width: 25px;
-  height: 25px;
-  font-size: 25px;
-  color: #fff;
-  background-color: rgba(31, 45, 61, 0.11);
-  opacity: 0.3;
+.exhibitionR1{
+  height: 50vh;
+  background-color: green;
+  position: relative;
 }
-.ant-carousel >>> .custom-slick-arrow:before {
-  display: none;
+.exhibitionR2{
+  height: 50vh;
+  background-color: blue;
+  position: relative;
 }
-.ant-carousel >>> .custom-slick-arrow:hover {
-  opacity: 0.5;
-}
-
-.ant-carousel >>> .slick-slide h3 {
-  color: #fff;
-}
-
 </style>

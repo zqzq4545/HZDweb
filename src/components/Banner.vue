@@ -15,10 +15,6 @@
 
 
 export default {
-
-
-
-
   name: "Banner",
   mounted() {
     this.createBanner()

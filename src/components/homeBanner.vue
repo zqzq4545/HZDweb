@@ -35,13 +35,6 @@ export default {
         var cur_img = document.createElement("img");
         var cur_p = document.createElement("p");
 
-        // 文字
-        // if( i == 1){
-        //   cur_p.innerHTML = "这里是文字表述1"
-        //
-        // }else if ( i == 2 ){
-        //   cur_p.innerHTML = "这里是文字表述2"
-        // }
         switch (i){
           case 1 :
             cur_p.innerHTML = "这里是文字表述1"
@@ -119,25 +112,11 @@ ul{
   top:0;
   left: 0;
   right: 0;
-
   margin: auto;
   height: 378px;
   width: 500%;
-
-  /*display: flex;*/
-  /*flex-direction: row;*/
-  /*justify-content:space-around;*/
-
-
 }
-/*ul:hover{*/
-/*  cursor:pointer;*/
-/*}*/
-@keyframes moveLeft
-{
-  0%    {right:0px}
-  100%  {right:675px}
-}
+
 .lButton{
   position: absolute;
   font-size: 40px;

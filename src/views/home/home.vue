@@ -61,7 +61,7 @@
 
     </div>
 
-    <headline :main-title="title4" :bgc-title="title4B" >
+    <headline :main-title="title3" :bgc-title="title3B" >
     </headline>
 
 
@@ -110,7 +110,7 @@
 
 
     </div>
-    <headline :main-title="title3" :bgc-title="title3B" >
+    <headline :main-title="title4" :bgc-title="title4B" >
     </headline>
 
 
@@ -164,7 +164,7 @@ export default {
       title3:"历届成绩",
       title3B:"Performance",
       title4:"校园生活",
-      title4B:"Performance",
+      title4B:"Activity",
 
       summarizeLeft:"\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0天津鸿志达培训学校成立于 2018 年，是一家教学、科研实力雄厚的中考、高考教育培训单位，" +
           "是经天津市教育行政部门批准成立的正规民办学校。" +

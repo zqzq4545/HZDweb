@@ -3,10 +3,10 @@
 
       <div class="navbar-btn" >
         <button @click="homeClick" >首页</button>
-        <button @click="campusClick" >校园</button>
-        <button @click="courseClick" >教学</button>
-        <button @click="showClick" >生活</button>
-        <button @click="otherClick" >收获</button>
+<!--        <button @click="campusClick" >校园</button>-->
+        <button @click="courseClick" >课程教学</button>
+        <button @click="showClick" >校园生活</button>
+        <button @click="otherClick" >家长反馈</button>
 
       </div>
 

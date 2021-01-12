@@ -2,39 +2,23 @@
   <div>
     <div class="phoneBanner">
       <div class="phone">
-      <img src="@/assets/image/course/phone.png">
+        <img src="@/assets/image/course/phone.png">
       </div>
       <div class="banner">
-        <a-carousel arrows>
-          <div
-              slot="prevArrow"
-              slot-scope="props"
-              class="custom-slick-arrow"
-              style="left: 10px;zIndex: 1"
-          >
-            <a-icon type="left-circle" />
-          </div>
-          <div slot="nextArrow" slot-scope="props" class="custom-slick-arrow" style="right: 10px">
-            <a-icon type="right-circle" />
-          </div>
-          <div><img src="@/assets/image/course/chatting/test1.png"></div>
-          <div><img src="@/assets/image/course/chatting/test2.png"></div>
-          <div><img src="@/assets/image/course/chatting/test3.png"></div>
-
-        </a-carousel>
+        <course-banner @beforeClick="beforeBannerText" @nextClick="nextBannerText" > </course-banner>
       </div>
       <div class="text">
         <p>
-          教务和家长沟通学生学情
+          {{bannerText}}
         </p>
-        <p>
-          上课期间，缜密的课堂监管
-        </p>
-      </div>
 
+      </div>
+      <div class="phoneBottom">
+        <img src="@/assets/image/course/PhoneDi.png" >
+      </div>
     </div>
 
-    <Headline></Headline>
+    <Headline :main-title="title1" :bgc-title="title1B" ></Headline>
 
     <div class="teacherIntroduce">
 
@@ -63,7 +47,7 @@
 
     </div>
 
-    <Headline></Headline>
+    <Headline  :main-title="title2" :bgc-title="title2B" ></Headline>
 
     <div class="teachingMethod">
         <a-collapse default-active-key="1" :bordered="false">
@@ -71,19 +55,27 @@
             <a-icon type="caret-right" :rotate="props.isActive ? 90 : 0" />
           </template>
           <a-collapse-panel key="1" header="早晚背诵默写测试" :style="customStyle">
-            <p>{{ text }}</p>
+            <p>教务早晚检测学生各科的背诵默写。<br>
+              对背诵、默写不合格的考生严加管理。<br>
+              默写只要不合格，哪怕错一个字，重默！<br>
+              默写到无误为止。2-3 天后，继续挨个查所有考生记忆情况，不合格者继续重默到完美。</p>
 
           </a-collapse-panel>
           <a-collapse-panel key="2" header="缜密的课堂监管" :style="customStyle">
-            <p>{{ text }}</p>
+            <p>教务进班听课<br>
+              校长随机抽查，进班听课，督导<br>
+              监控室内有老师实时监控课堂情况，随时群内通报给家长<br>
+              课后，班主任听取任课教师对每个学生的学习状况评价和细节描述，于当天晚上逐一向家长汇报。<br>
+            </p>
           </a-collapse-panel>
           <a-collapse-panel key="3" header="严谨的周测月考" :style="customStyle">
-            <p>{{ text }}</p>
+            <p>鸿志达培训学校每周组织各科周测以及每月组织各科月考，<br>
+              各科试卷由任课老师根据学生情况精心编写，并且考试后任课老师根据学生表现和成绩进行评价。</p>
           </a-collapse-panel>
         </a-collapse>
     </div>
 
-    <Headline></Headline>
+    <Headline  :main-title="title3" :bgc-title="title3B" ></Headline>
 
     <div class="teacherDuty" >
        <p>
@@ -99,7 +91,7 @@
       </p>
     </div>
 
-    <Headline></Headline>
+    <Headline  :main-title="title4" :bgc-title="title4B" ></Headline>
 
     <div class="communicate">
       <a-steps v-model="current" type="navigation" size="small" :style="stepStyle">
@@ -130,59 +122,78 @@
 
 <script>
 import Headline from "@/components/Headline";
-
+import courseBanner from "@/components/courseBanner";
 
 
 export default {
   name: "course",
   components: {
     Headline,
-
+    courseBanner,
   },
   data() {
     return {
+      //banner文本
+      bannerText:"教务和家长沟通学生学情",
+
+      //标题
+      title1:"名师风采",
+      title1B:"Teachers",
+      title2:"教学方法",
+      title2B:"Methods",
+      title3:"教师责任",
+      title3B:"Responsibility",
+      title4:"24小时沟通",
+      title4B:"24 Hours",
+
       current:0,
-      text: `A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.`,
-      customStyle:
-          'background: #ffffff;border-radius: 4px;margin-bottom: 24px;border: 0;overflow: hidden;font-size:20px;',
+
+      customStyle: 'background: #ffffff;border-radius: 4px;margin-bottom: 24px;border: 0;overflow: hidden;font-size:20px;',
       stepStyle: {
         marginBottom: '60px',
         boxShadow: '0px -1px 0 0 #e8e8e8 inset',
       },
+
+
     };
+  },
+  methods:{
+    //控制banner文字
+    nextBannerText(e){
+      this.bannerTextChange(e)
+    },
+    beforeBannerText(e){
+      this.bannerTextChange(e)
+    },
+    bannerTextChange(e){
+      switch (e){
+        case 0 :
+          this.bannerText = "教务和家长沟通学生学情"
+          break;
+        case 1 :
+          this.bannerText = "这里是文字表述2"
+          break;
+        case 2 :
+          this.bannerText = "这里是文字表述3"
+          break;
+        case 3 :
+          this.bannerText = "这里是文字表述4"
+          break;
+        case 4 :
+          this.bannerText = "这里是文字表述5"
+          break;
+      }
+    }
+
+
+
   },
 }
 </script>
 
 <style scoped>
 @import "~@/assets/css/course.css";
-.ant-carousel >>> .slick-slide {
-  text-align: center;
-  position: relative;
-  border-radius: 60px;
-  line-height: 100px;
-  background: #364d79;
-  overflow: hidden;
-}
 
-.ant-carousel >>> .custom-slick-arrow {
-  width: 25px;
-
-  font-size: 25px;
-  color: #fff;
-  background-color: rgba(31, 45, 61, 0.11);
-  opacity: 0.3;
-}
-.ant-carousel >>> .custom-slick-arrow:before {
-  display: none;
-}
-.ant-carousel >>> .custom-slick-arrow:hover {
-  opacity: 0.5;
-}
-
-.ant-carousel >>> .slick-slide h3 {
-  color: #fff;
-}
 
 
 </style>
