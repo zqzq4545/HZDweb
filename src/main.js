@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from "@/router";
 import animated from 'animate.css'
 import axios from "axios";
-import { Button,Timeline,Icon,Row,Col,Divider,Affix,Form,Input,InputNumber,Carousel,Collapse,Steps,Card } from 'ant-design-vue';
+import { Button,Timeline,Icon,Row,Col,Divider,Affix,Form,Input,InputNumber,Carousel,Collapse,Steps,Card,Select,FormModel  } from 'ant-design-vue';
 import echarts from "echarts";
 
 
@@ -32,6 +32,10 @@ Vue.component(Steps.name, Steps);
 Vue.component(Steps.Step.name,Steps.Step)
 Vue.component(Card.name, Card);
 Vue.component(Card.Meta.name, Card.Meta);
+Vue.component(Select.name, Select);
+Vue.component(Select.Option.name, Select.Option);
+Vue.component(FormModel.name, FormModel);
+Vue.component(FormModel.Item.name, FormModel.Item);
 
 Vue.config.productionTip = false
 

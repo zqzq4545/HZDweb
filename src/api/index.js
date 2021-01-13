@@ -6,3 +6,10 @@ export function getVerificationCode(phone) {
         url: `/studentInfo/getCode/${phone}`
     })
 }
+export function saveInfo(data) {
+    return axios({
+        method: 'post',
+        url: `/studentInfo/saveStudentInfo`,
+        data,
+    })
+}
