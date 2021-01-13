@@ -40,20 +40,19 @@
 
     <div class="teacher">
       <a-row :span="24" type="flex" justify="space-between">
-        <a-col :span="8">
-          <div class="teacher-container">
-            <img src="~@/assets/image/teacher-bgc.png">
-          </div>
+        <a-col class="teacher-container" :span="8"  @mouseover="overTeacher(0,0)" @mouseleave="leaveTeacher(0)">
+            <img  v-if="isTeacher1" class="teacherD  " src="~@/assets/image/teacherDetail.png" key="d">
+             <img v-else ref="teacherP1" class="teacherP " src="~@/assets/image/teacher1-bgc.png" key="p">
         </a-col>
-        <a-col :span="8">
-          <div class="teacher-container">
-            <img src="~@/assets/image/teacher-bgc.png">
-          </div>
+        <a-col class="teacher-container" :span="8">
+
+            <img src="~@/assets/image/teacher2-bgc.png">
+
         </a-col>
-        <a-col :span="8">
-          <div class="teacher-container">
-            <img src="~@/assets/image/teacher-bgc.png">
-          </div>
+        <a-col class="teacher-container" :span="8">
+
+            <img src="~@/assets/image/teacher3-bgc.png">
+
         </a-col>
       </a-row>
 
@@ -145,8 +144,6 @@ export default {
   },
   mounted() {
     this.initData()
-    // this.$refs.video.style.height = this.screenHeight + 'px';//背景视频和元素大小相等
-    // this.$refs.video.style.width = this.screenWidth + 'px'
     this.addScore()
     window.addEventListener('scroll',this.handleScroll)
   },
@@ -165,6 +162,13 @@ export default {
       title3B:"Performance",
       title4:"校园生活",
       title4B:"Activity",
+
+      isTeacher1:false,
+      name1:"张校长",
+      introduction1:"十二年天津高考英语\n" +
+          "教学、研究经验。\n"  +
+          "Florida state university\n"+ +
+          "硕士学位。",
 
       summarizeLeft:"\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0天津鸿志达培训学校成立于 2018 年，是一家教学、科研实力雄厚的中考、高考教育培训单位，" +
           "是经天津市教育行政部门批准成立的正规民办学校。" +
@@ -198,6 +202,22 @@ export default {
   },
 
   methods:{
+    //老师介绍部分
+    overTeacher(index){
+
+      this.isTeacher1 = true
+
+
+
+
+    },
+    leaveTeacher(){
+      this.isTeacher1 = false
+    },
+
+
+
+    //时间线部分控制
     //鼠标移入
     overTimeLine(index){
       this.leaveTimeLine(this.timeLineShow)
@@ -261,11 +281,11 @@ export default {
     },
 
     summarizeShow () {
-      console.log("1");
       this.summarizeLeftClass.push("animate__animated animate__fadeInDown");
       this.summarizeRightClass.push("animate__animated animate__fadeInUp")
 
     },
+
 
   },
 }
@@ -277,5 +297,15 @@ export default {
 @import "~@/assets/css/home.css";
 
 
+.teacherP{
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,.5));
+  position:relative;
+}
+.teacherD{
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,.5));
+  position:relative;
+
+
+}
 
 </style>

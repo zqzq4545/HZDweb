@@ -144,10 +144,17 @@
     z-index: 0;
     text-align: center;
 }
-.teacher-container img:hover{
+.teacher-container :hover{
     transform: scale(1.15);
     transition: 0.7s;
+
 }
+    .teacher-container p{
+        position: absolute;
+        z-index: 2;
+        text-align: left;
+    }
+
 .performance{
     position: relative;
     z-index: 0;
